@@ -1,0 +1,75 @@
+.maskGroupIcon,
+.startameetingInvitebvphoneChild {
+  position: absolute;
+  top: 209px;
+  width: 572px;
+  height: 422px;
+}
+.maskGroupIcon {
+  left: 138px;
+  object-fit: cover;
+}
+.startameetingInvitebvphoneChild {
+  left: 730px;
+  border-radius: var(--br-9xs);
+  background-color: var(--secondary-10);
+  border: 1px solid var(--primary-100);
+  box-sizing: border-box;
+}
+.inviteOthersTo,
+.meetingLinkHttpsmeeting {
+  position: absolute;
+  top: 598px;
+  left: 748px;
+  line-height: 20px;
+}
+.inviteOthersTo {
+  top: 239px;
+  left: 869px;
+  font-size: var(--text-2xl-bold-size);
+  line-height: 32px;
+  color: var(--white-100);
+}
+.startameetingInvitebvphoneItem {
+  position: absolute;
+  top: 590.5px;
+  left: 729.5px;
+  border-top: 1px solid var(--primary-100);
+  box-sizing: border-box;
+  width: 573px;
+  height: 1px;
+}
+.theyWillReceive {
+  position: absolute;
+  top: 379px;
+  left: 770px;
+  font-size: var(--text-xs-regular-size);
+  line-height: 14px;
+  color: var(--white-50);
+}
+.startameetingInvitebvphoneInner {
+  position: absolute;
+  top: 566px;
+  left: 354px;
+  width: 140px;
+  height: 40px;
+}
+.startameetingInvitebvphone {
+  position: relative;
+  background-color: var(--neutral-100);
+  width: 1440px;
+  height: 900px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--text-base-bold-size);
+  color: var(--white-70);
+  font-family: var(--text-xs-regular);
+  margin-left: auto;
+  margin-right: auto;
+}
+.startmeetingbyphone_wrapper{
+    height: 900px;
+  overflow: hidden;
+    position: relative;
+  background-color: var(--neutral-100);
+}

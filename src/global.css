@@ -1,16 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Graphik:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap");
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 body {
-  @apply leading-[normal] m-0;
+  margin: 0;
+  line-height: normal;
 }
-*,
-::before,
-::after {
-  border-width: 0;
-}
-.button-component{
-  padding: 0 !important;
+:root {
+  /* fonts */
+  --text-xs-regular: Barlow;
+  --font-graphik: Graphik;
+
+  /* font sizes */
+  --text-xs-regular-size: 10px;
+  --text-base-bold-size: 14px;
+  --text-sm-bold-size: 12px;
+  --text-2xl-bold-size: 24px;
+  --font-size-base: 16px;
+
+  /* Colors */
+  --neutral-100: #060f14;
+  --color-gray-100: rgba(255, 255, 255, 0.12);
+  --white-10: rgba(255, 255, 255, 0.1);
+  --neutral-5: rgba(6, 15, 20, 0.05);
+  --white-70: rgba(255, 255, 255, 0.7);
+  --neutral-30: rgba(6, 15, 20, 0.3);
+  --white-50: rgba(255, 255, 255, 0.5);
+  --white-100: #fff;
+  --primary-100: #29658a;
+  --primary-80: rgba(41, 101, 138, 0.8);
+  --primary-10: rgba(41, 101, 138, 0.1);
+  --secondary-10: rgba(76, 149, 108, 0.1);
+
+  /* Gaps */
+  --gap-3xs: 10px;
+
+  /* Paddings */
+  --padding-3xs: 10px;
+  --padding-5xl: 24px;
+  --padding-xs: 12px;
+  --padding-11xs: 2px;
+  --padding-7xs: 6px;
+
+  /* Border radiuses */
+  --br-9xs: 4px;
+  --br-11xs: 2px;
+
+  /* Effects */
+  --ds-sm: 0px 1px 2px rgba(0, 0, 0, 0.05);
 }

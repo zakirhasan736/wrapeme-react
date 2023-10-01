@@ -1,0 +1,115 @@
+.invitetabsChild {
+  position: absolute;
+  height: 67.74%;
+  width: 100%;
+  top: 32.26%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-9xs);
+  background-color: var(--white-100);
+  box-shadow: var(--ds-sm);
+}
+.invitetabsChild1,
+.invitetabsInner,
+.invitetabsItem,
+.rectangleDiv {
+  position: absolute;
+  background-color: var(--primary-10);
+  box-shadow: var(--ds-sm);
+  border: 1px solid var(--primary-100);
+  box-sizing: border-box;
+}
+.invitetabsItem {
+  height: 70.97%;
+  width: 26.83%;
+  top: 30.65%;
+  right: 73.37%;
+  bottom: -1.61%;
+  left: -0.2%;
+  border-radius: var(--br-9xs) 0 0 var(--br-9xs);
+}
+.invitetabsChild1,
+.invitetabsInner,
+.rectangleDiv {
+  height: 67.74%;
+  width: 26.42%;
+  top: 32.26%;
+  right: 47.15%;
+  bottom: 0;
+  left: 26.42%;
+  display: none;
+}
+.invitetabsChild1,
+.rectangleDiv {
+  width: 25.41%;
+  right: 21.75%;
+  left: 52.85%;
+}
+.invitetabsChild1 {
+  width: 21.54%;
+  right: 0.2%;
+  left: 78.25%;
+  border-radius: 0 var(--br-9xs) var(--br-9xs) 0;
+}
+.contacts,
+.email,
+.phone,
+.sms {
+  position: absolute;
+  top: 50%;
+  left: 7.52%;
+  line-height: 20px;
+}
+.email,
+.phone,
+.sms {
+  left: 36.18%;
+  cursor: pointer;
+}
+.phone,
+.sms {
+  left: 61.59%;
+}
+.sms {
+  left: 86.38%;
+}
+.inviteType {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: var(--text-sm-bold-size);
+  line-height: 16px;
+  color: var(--white-70);
+}
+.invitetabsChild2,
+.invitetabsChild3,
+.lineDiv {
+  position: absolute;
+  height: 69.35%;
+  width: 0.2%;
+  top: 31.45%;
+  right: 47.05%;
+  bottom: -0.81%;
+  left: 52.74%;
+  border-right: 1px solid var(--neutral-5);
+  box-sizing: border-box;
+}
+.invitetabsChild2,
+.invitetabsChild3 {
+  right: 22.05%;
+  left: 77.74%;
+}
+.invitetabsChild3 {
+  right: 73.48%;
+  left: 26.32%;
+  display: none;
+}
+.invitetabs {
+  width: 492px;
+  height: 62px;
+  text-align: left;
+  font-size: var(--text-base-bold-size);
+  color: var(--primary-100);
+  font-family: var(--text-xs-regular);
+}

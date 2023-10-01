@@ -1,4 +1,5 @@
 import { FunctionComponent, useMemo, type CSSProperties } from "react";
+import styles from "./Search.module.css";
 
 type SearchType = {
   searchNamePhoneNo?: string;
@@ -55,22 +56,13 @@ const Search: FunctionComponent<SearchType> = ({
 
   return (
     <div
-      className="rounded bg-white-100 shadow-[0px_1px_2px_rgba(0,_0,_0,_0.05)] box-border w-[290px] h-[42px] overflow-hidden text-left text-sm text-neutral-30 font-text-xs-regular border-[1px] border-solid border-neutral-5"
+      className={styles.search}
       style={searchStyle}
       onClick={onSearchContainerClick}
     >
-      <div
-        className="absolute top-[10px] left-[16px] w-[171px] h-5"
-        style={groupDivStyle}
-      >
-        <div className="absolute top-[0px] left-[26px] leading-[20px]">
-          {searchNamePhoneNo}
-        </div>
-        <img
-          className="absolute top-[3px] left-[0px] w-4 h-4 overflow-hidden"
-          alt=""
-          src={carbonsearch}
-        />
+      <div className={styles.searchNamePhoneNoParent} style={groupDivStyle}>
+        <div className={styles.searchNamePhone}>{searchNamePhoneNo}</div>
+        <img className={styles.carbonsearchIcon} alt="" src={carbonsearch} />
       </div>
     </div>
   );

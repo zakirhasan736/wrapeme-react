@@ -1,4 +1,5 @@
 import { FunctionComponent, useMemo, type CSSProperties } from "react";
+import styles from "./ButtonsTextIconButton.module.css";
 
 type ButtonsTextIconButtonType = {
   carboncopy?: string;
@@ -37,15 +38,11 @@ const ButtonsTextIconButton: FunctionComponent<ButtonsTextIconButtonType> = ({
 
   return (
     <div
-      className="rounded h-10 flex flex-row items-center justify-center pt-2.5 px-6 pb-3 box-border gap-[10px] text-center text-sm text-neutral-100 font-text-xs-regular"
+      className={styles.buttonstexticonbutton}
       style={buttonsTextIconButtonStyle}
     >
-      <img
-        className="relative w-4 h-4 overflow-hidden shrink-0"
-        alt=""
-        src={carboncopy}
-      />
-      <b className="relative leading-[20px]" style={text1Style}>
+      <img className={styles.carboncopyIcon} alt="" src={carboncopy} />
+      <b className={styles.text} style={text1Style}>
         Copy Link
       </b>
     </div>

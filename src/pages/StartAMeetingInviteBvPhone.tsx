@@ -6,6 +6,7 @@ import ButtonsTextIconButton from "../components/ButtonsTextIconButton";
 import Property1HoverProperty2H from "../components/Property1HoverProperty2H";
 import Search from "../components/Search";
 import CallControls from "../components/CallControls";
+import styles from "./StartAMeetingInviteBvPhone.module.css";
 
 const StartAMeetingInviteBvPhone: FunctionComponent = () => {
   const navigate = useNavigate();
@@ -59,13 +60,9 @@ const StartAMeetingInviteBvPhone: FunctionComponent = () => {
   }, []);
 
   return (
-    <div className="wrap-container w-full bg-neutral-100">
-      <div className="relative bg-neutral-100 max-w-[1440px] w-full mx-auto max-h-[900px] h-[100vh] overflow-hidden text-left text-sm text-white-70 font-text-xs-regular">
-        <img
-          className="absolute top-[209px] left-[138px] w-[572px] h-[422px] object-cover"
-          alt=""
-          src="/mask-group@2x.png"
-        />
+    <div className={styles.startmeetingbyphone_wrapper}>
+      <div className={styles.startameetingInvitebvphone}>
+        <img className={styles.maskGroupIcon} alt="" src="/mask-group@2x.png" />
         <MeetingHeader
           maskGroup="/mask-group1@2x.png"
           carbonplay="/carbonplay.svg"
@@ -87,7 +84,7 @@ const StartAMeetingInviteBvPhone: FunctionComponent = () => {
           onGroupContainer4Click={onGroupContainer4Click}
           onCarbonhelpIconClick={onCarbonhelpIconClick}
         />
-        <div className="absolute top-[209px] left-[730px] rounded bg-secondary-10 box-border w-[572px] h-[422px] border-[1px] border-solid border-primary-100" />
+        <div className={styles.startameetingInvitebvphoneChild} />
         <InviteTabs
           showRectangleDiv={false}
           rectangleDiv
@@ -115,13 +112,11 @@ const StartAMeetingInviteBvPhone: FunctionComponent = () => {
           buttonsTextIconButtonLeft="1167px"
           textColor="#fff"
         />
-        <div className="absolute top-[598px] left-[748px] leading-[20px]">
+        <div className={styles.meetingLinkHttpsmeeting}>
           Meeting Link: https://meeting.wrapme.com/23HQK3
         </div>
-        <b className="absolute top-[239px] left-[869px] text-5xl leading-[32px] text-white-100">
-          Invite others to the meeting
-        </b>
-        <div className="absolute top-[590.5px] left-[729.5px] box-border w-[573px] h-px border-t-[1px] border-solid border-primary-100" />
+        <b className={styles.inviteOthersTo}>Invite others to the meeting</b>
+        <div className={styles.startameetingInvitebvphoneItem} />
         <Property1HoverProperty2H
           text="Invite"
           property1HoverProperty2HPosition="absolute"
@@ -134,7 +129,7 @@ const StartAMeetingInviteBvPhone: FunctionComponent = () => {
         <Search
           searchNamePhoneNo="e.g. +15551231234 or name"
           carbonsearch="/carbonsearch.svg"
-          searchBorder="1px solid rgba(41, 101, 138, 0.1)"
+          searchBorder="1px solid var(--primary-10)"
           searchWidth="402px"
           searchPosition="absolute"
           searchTop="403px"
@@ -143,7 +138,7 @@ const StartAMeetingInviteBvPhone: FunctionComponent = () => {
           groupDivWidth="183px"
           onSearchContainerClick={onSearchContainerClick}
         />
-        <div className="absolute top-[379px] left-[770px] text-3xs leading-[14px] text-white-50">
+        <div className={styles.theyWillReceive}>
           They will receive a call, adding them to the room
         </div>
         <CallControls
@@ -153,7 +148,7 @@ const StartAMeetingInviteBvPhone: FunctionComponent = () => {
           callControlsIconLeft="0px"
         />
         <img
-          className="absolute top-[566px] left-[354px] w-[140px] h-10"
+          className={styles.startameetingInvitebvphoneInner}
           alt=""
           src="/group-356.svg"
         />

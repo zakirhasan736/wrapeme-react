@@ -1,0 +1,17 @@
+.text {
+  position: relative;
+  line-height: 20px;
+}
+.property1hoverProperty2h {
+  border-radius: var(--br-9xs);
+  background-color: var(--primary-100);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  text-align: center;
+  font-size: var(--text-base-bold-size);
+  color: var(--white-100);
+  font-family: var(--text-xs-regular);
+}

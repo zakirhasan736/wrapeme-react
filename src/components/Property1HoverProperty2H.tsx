@@ -1,4 +1,5 @@
 import { FunctionComponent, useMemo, type CSSProperties } from "react";
+import styles from "./Property1HoverProperty2H.module.css";
 
 type Property1HoverProperty2HType = {
   text?: string;
@@ -47,10 +48,10 @@ const Property1HoverProperty2H: FunctionComponent<
 
   return (
     <div
-      className="button-component rounded bg-primary-100 flex flex-row items-center justify-center pt-2.5 px-6 pb-3 text-center text-sm text-white-100 font-text-xs-regular"
+      className={styles.property1hoverProperty2h}
       style={property1HoverProperty2HStyle}
     >
-      <b className="relative leading-[20px]" style={textStyle}>
+      <b className={styles.text} style={textStyle}>
         {text}
       </b>
     </div>

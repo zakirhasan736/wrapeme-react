@@ -1,5 +1,5 @@
 import { FunctionComponent, useMemo, type CSSProperties } from "react";
-import Property1MeetingTabs from "./Property1MeetingTabs";
+import styles from "./MeetingHeader.module.css";
 
 type MeetingHeaderType = {
   maskGroup?: string;
@@ -57,79 +57,82 @@ const MeetingHeader: FunctionComponent<MeetingHeaderType> = ({
   }, [meetingHeaderPosition, meetingHeaderTop, meetingHeaderLeft]);
 
   return (
-    <div
-      className="w-[1440px] h-14 text-left text-sm text-white-100 font-graphik"
-      style={meetingHeaderStyle}
-    >
-      <div className="absolute h-[60.71%] w-[7.85%] top-[10.71%] right-[85.28%] bottom-[28.57%] left-[6.88%] text-base">
-        <div className="absolute top-[0%] left-[0%] leading-[100%]">
-          Quick Catchup
-        </div>
-        <div className="absolute top-[58.82%] left-[0%] text-sm leading-[100%] text-white-50">
-          ID: WM-1223-HB
-        </div>
+    <div className={styles.meetingheader} style={meetingHeaderStyle}>
+      <div className={styles.quickCatchupParent}>
+        <div className={styles.quickCatchup}>Quick Catchup</div>
+        <div className={styles.idWm1223Hb}>ID: WM-1223-HB</div>
       </div>
-      <div className="absolute h-[35.71%] w-[3.06%] top-[23.21%] right-[81.53%] bottom-[41.07%] left-[15.42%] rounded-sm bg-gray flex flex-col items-center justify-between pt-0.5 px-1.5 pb-0 box-border">
-        <div className="relative leading-[12px] uppercase">0:08</div>
+      <div className={styles.wrapper}>
+        <div className={styles.div}>0:08</div>
       </div>
-      <img
-        className="absolute h-[51.79%] w-[4.83%] top-[16.07%] right-[93.78%] bottom-[32.14%] left-[1.39%] max-w-full overflow-hidden max-h-full object-cover"
-        alt=""
-        src={maskGroup}
-      />
-      <div className="absolute h-[1.79%] w-[100.07%] top-[99.11%] right-[-0.03%] bottom-[-0.89%] left-[-0.03%] box-border border-t-[1px] border-solid border-white-10" />
-      <div className="absolute h-[82.14%] w-[22.22%] top-[0%] right-[1.25%] bottom-[17.86%] left-[76.53%] text-primary-80 font-text-xs-regular">
+      <img className={styles.maskGroupIcon} alt="" src={maskGroup} />
+      <div className={styles.meetingheaderChild} />
+      <div className={styles.carbonplayParent}>
         <img
-          className="absolute h-[43.48%] w-[6.25%] top-[28.26%] right-[62.5%] bottom-[28.26%] left-[31.25%] max-w-full overflow-hidden max-h-full cursor-pointer"
+          className={styles.carbonplayIcon}
           alt=""
           src={carbonplay}
           onClick={onCarbonplayIconClick}
         />
-        <div
-          className="absolute h-full w-[37.5%] top-[0%] right-[0%] bottom-[0%] left-[62.5%] rounded-sm box-border cursor-pointer border-[1px] border-solid border-primary-80"
-          onClick={onRectangleClick}
-        />
-        <div className="absolute h-[43.48%] w-[18.75%] top-[28.26%] right-[10%] bottom-[28.26%] left-[71.25%]">
-          <b className="absolute top-[0%] left-[41.67%] leading-[20px]">
-            Invite
-          </b>
+        <div className={styles.groupChild} onClick={onRectangleClick} />
+        <div className={styles.inviteParent}>
+          <b className={styles.invite}>Invite</b>
           <img
-            className="absolute h-4/5 w-[26.67%] top-[10%] right-[73.33%] bottom-[10%] left-[0%] max-w-full overflow-hidden max-h-full"
+            className={styles.carbonuserFollowIcon}
             alt=""
             src={carbonuserFollow}
           />
         </div>
         <img
-          className="absolute h-[43.48%] w-[6.25%] top-[28.26%] right-[78.13%] bottom-[28.26%] left-[15.63%] max-w-full overflow-hidden max-h-full cursor-pointer"
+          className={styles.carbonuserMultipleIcon}
           alt=""
           src={carbonuserMultiple}
           onClick={onCarbonuserMultipleIconClick}
         />
         <img
-          className="absolute h-[43.48%] w-[6.25%] top-[28.26%] right-[93.75%] bottom-[28.26%] left-[0%] max-w-full overflow-hidden max-h-full cursor-pointer"
+          className={styles.carbonuserRoleIcon}
           alt=""
           src={carbonuserRole}
           onClick={onCarbonuserRoleIconClick}
         />
       </div>
-      <Property1MeetingTabs
-        carbondocumentSigned="/carbondocumentsigned.svg"
-        carbondocumentAdd="/carbondocumentadd.svg"
-        carboncheckbox="/carboncheckbox.svg"
-        property1MeetingTabsWidth="34.38%"
-        property1MeetingTabsHeight="76.79%"
-        property1MeetingTabsPosition="absolute"
-        property1MeetingTabsTop="23.21%"
-        property1MeetingTabsRight="32.78%"
-        property1MeetingTabsBottom="0%"
-        property1MeetingTabsLeft="32.85%"
-        eSignColor="#fff"
-        transactionTypeColor="#fff"
-        onGroupContainerClick={onGroupContainer3Click}
-        onGroupContainer1Click={onGroupContainer4Click}
-      />
+      <div className={styles.meetingtabs}>
+        <div className={styles.meetingtabsChild} />
+        <div className={styles.meetingtabsItem} />
+        <div
+          className={styles.carbondocumentSignedParent}
+          onClick={onGroupContainer3Click}
+        >
+          <img
+            className={styles.carbondocumentSignedIcon}
+            alt=""
+            src={carbondocumentSigned}
+          />
+          <div className={styles.esign}>eSign</div>
+        </div>
+        <div
+          className={styles.carbondocumentAddParent}
+          onClick={onGroupContainer4Click}
+        >
+          <img
+            className={styles.carbondocumentAddIcon}
+            alt=""
+            src={carbondocumentAdd}
+          />
+          <div className={styles.transactionType}>Transaction Type</div>
+        </div>
+        <div className={styles.meetingtabsInner} />
+        <div className={styles.roomParent}>
+          <b className={styles.room}>Room</b>
+          <img
+            className={styles.carboncheckboxIcon}
+            alt=""
+            src={carboncheckbox}
+          />
+        </div>
+      </div>
       <img
-        className="absolute h-[35.71%] w-[1.39%] top-[23.21%] right-[11.67%] bottom-[41.07%] left-[86.94%] max-w-full overflow-hidden max-h-full cursor-pointer"
+        className={styles.carbonhelpIcon}
         alt=""
         src={carbonhelp}
         onClick={onCarbonhelpIconClick}

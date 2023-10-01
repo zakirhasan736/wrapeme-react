@@ -1,4 +1,5 @@
 import { FunctionComponent, useMemo, type CSSProperties } from "react";
+import styles from "./CallControls.module.css";
 
 type CallControlsType = {
   callControlsCallControls?: string;
@@ -25,7 +26,7 @@ const CallControls: FunctionComponent<CallControlsType> = ({
 
   return (
     <img
-      className="w-[1440px] h-20"
+      className={styles.callcontrolsIcon}
       alt=""
       src={callControlsCallControls}
       style={callControlsIconStyle}
